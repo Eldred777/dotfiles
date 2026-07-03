@@ -19,6 +19,6 @@ set hlsearch " highlight matches
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
-set foldmethod=indent 
+set foldmethod=syntax 
+set foldcolumn=2
 " Other acceptable values are marker, manual, expr, syntax, diff
-
