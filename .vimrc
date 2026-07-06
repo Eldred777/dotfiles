@@ -13,7 +13,7 @@ filetype indent on " load filetype-specific indent files
 
 " searching
 set incsearch      " search as characters typed
-set hlsearch " highlight matches
+set hlsearch       " highlight matches
 
 "folding
 set foldenable
@@ -22,3 +22,19 @@ set foldnestmax=10
 set foldmethod=syntax 
 set foldcolumn=2
 " Other acceptable values are marker, manual, expr, syntax, diff
+"
+"
+"
+"
+"
+
+" remap arrow keys to no-op to force me to learn hjkl
+inoremap <Up>    <nop>
+inoremap <Right> <nop>
+inoremap <Left>  <nop>
+inoremap <Down>  <nop>
+nnoremap <Up>    <nop>
+nnoremap <Right> <nop>
+nnoremap <Left>  <nop>
+nnoremap <Down>  <nop>
+
