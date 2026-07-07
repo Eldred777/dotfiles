@@ -22,11 +22,6 @@ set foldnestmax=10
 set foldmethod=syntax 
 set foldcolumn=2
 " Other acceptable values are marker, manual, expr, syntax, diff
-"
-"
-"
-"
-"
 
 " remap arrow keys to no-op to force me to learn hjkl
 inoremap <Up>    <nop>
@@ -37,4 +32,3 @@ nnoremap <Up>    <nop>
 nnoremap <Right> <nop>
 nnoremap <Left>  <nop>
 nnoremap <Down>  <nop>
-
