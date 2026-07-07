@@ -1,3 +1,6 @@
+" export VIMINIT='source $MYVIMRC'
+" export MYVIMRC='/path/to/.vimrc'
+
 syntax enable " enable syntax highlighting
 
 " Spaces and tabs
