@@ -30,12 +30,8 @@ let mapleader = ","
 set timeoutlen=500 " set leader timeout to 500 ms
 
 inoremap jk <Esc>                        " hit jk in insert mode to esc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr> " Edit Vimrc
 
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
+nnoremap <leader>ev :vsplit $MYVIMRC<cr> " Edit Vimrc
 
 " remap arrow keys to no-op to force me to learn hjkl
 inoremap <Up>    <nop>
@@ -46,4 +42,14 @@ nnoremap <Up>    <nop>
 nnoremap <Right> <nop>
 nnoremap <Left>  <nop>
 nnoremap <Down>  <nop>
+
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" -------------------------------------
+" Plugins 
+" -------------------------------------
+" Plug 'machakann/vim-highlightedyank'
 
