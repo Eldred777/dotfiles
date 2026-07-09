@@ -38,7 +38,7 @@ nnoremap <leader>p "*p
 nnoremap <leader>P "*P                   
 " ^^^
 nnoremap <leader>y "*y 
-nnoremap <leader>h :nohl                 
+nnoremap <leader>h :nohl<cr>
 """ "cease highlighting
 
 " remap arrow keys to no-op to force me to learn hjkl
