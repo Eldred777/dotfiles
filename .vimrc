@@ -31,7 +31,15 @@ set timeoutlen=500 " set leader timeout to 500 ms
 
 inoremap jk <Esc>                        " hit jk in insert mode to esc
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr> " Edit Vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr> 
+" Edit Vimrc
+nnoremap <leader>p "*p                   
+" paste from clipboard
+nnoremap <leader>P "*P                   
+" ^^^
+nnoremap <leader>y "*y 
+nnoremap <leader>h :nohl                 
+""" "cease highlighting
 
 " remap arrow keys to no-op to force me to learn hjkl
 inoremap <Up>    <nop>
