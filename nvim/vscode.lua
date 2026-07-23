@@ -5,6 +5,15 @@ if not vim.g.vscode then
     return
 end
 
+-- vim/keybinds.vim no-ops arrow keys everywhere to force hjkl, but that's
+-- a vim/nvim-only preference -- restore normal arrow-key behavior here so
+-- VS Code's own arrow handling isn't broken.
+for _, mode in ipairs({ "n", "i" }) do
+    for _, key in ipairs({ "<Up>", "<Down>", "<Left>", "<Right>" }) do
+        pcall(vim.keymap.del, mode, key)
+    end
+end
+
 local vscode_api = require("vscode")
 
 local function vscode(cmd)
