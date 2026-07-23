@@ -40,6 +40,9 @@ nnoremap <leader>P "*P
 nnoremap <leader>y "*y 
 nnoremap <leader>h :nohl<cr>
 """ "cease highlighting
+nnoremap <leader>q :q<cr>
+
+
 vnoremap <leader>i[ di[]<Esc>P
 " surround visual mode selection in square brackets
 
