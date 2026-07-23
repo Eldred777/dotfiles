@@ -13,7 +13,9 @@ end
 
 vim.keymap.set("n", "za", vscode("editor.toggleFold"))
 vim.keymap.set("n", "zo", vscode("editor.unfold"))
+vim.keymap.set("n", "zO", vscode("editor.unfoldRecursively"))
 vim.keymap.set("n", "zc", vscode("editor.fold"))
+vim.keymap.set("n", "zC", vscode("editor.foldRecursively"))
 vim.keymap.set("n", "zM", vscode("editor.foldAll"))
 vim.keymap.set("n", "zR", vscode("editor.unfoldAll"))
 
