@@ -41,6 +41,7 @@ nnoremap <leader>y "*y
 nnoremap <leader>h :nohl<cr>
 """ "cease highlighting
 nnoremap <leader>q :q<cr>
+nnoremap <leader>z za<cr>
 
 
 vnoremap <leader>i[ di[]<Esc>P
