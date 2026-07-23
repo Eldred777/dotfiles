@@ -16,3 +16,23 @@ vim.keymap.set("n", "zo", vscode("editor.unfold"))
 vim.keymap.set("n", "zc", vscode("editor.fold"))
 vim.keymap.set("n", "zM", vscode("editor.foldAll"))
 vim.keymap.set("n", "zR", vscode("editor.unfoldAll"))
+
+-- j/k move by real line instead of display line when folds are involved,
+-- since vscode-neovim doesn't sync folds to neovim's own line model.
+-- Use gj/gk (display-line motion) unless a count is given or a macro is
+-- being recorded/executed, where real j/k must pass through unchanged.
+-- https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1264782696
+local function move_cursor(direction)
+    if vim.v.count == 0 and vim.fn.reg_recording() == "" and vim.fn.reg_executing() == "" then
+        return "g" .. direction
+    else
+        return direction
+    end
+end
+
+vim.keymap.set("n", "j", function()
+    return move_cursor("j")
+end, { expr = true, remap = true })
+vim.keymap.set("n", "k", function()
+    return move_cursor("k")
+end, { expr = true, remap = true })
