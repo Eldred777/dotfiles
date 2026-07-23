@@ -1,0 +1,23 @@
+name: Lint dotfiles
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install vim and neovim
+        run: sudo apt-get update && sudo apt-get install -y vim neovim git curl
+
+      - name: Symlink checkout to ~/dotfiles
+        run: ln -s "$GITHUB_WORKSPACE" "$HOME/dotfiles"
+
+      - name: Source the plain vim chain (.vimrc)
+        run: vim -Es -u .vimrc -c 'qall!'
+
+      - name: Source the neovim chain (nvim/init.lua)
+        run: nvim --headless -u nvim/init.lua -c 'qall!'
