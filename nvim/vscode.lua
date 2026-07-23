@@ -5,9 +5,11 @@ if not vim.g.vscode then
     return
 end
 
+local vscode_api = require("vscode")
+
 local function vscode(cmd)
     return function()
-        vim.fn.VSCodeNotify(cmd)
+        vscode_api.call(cmd)
     end
 end
 
