@@ -53,5 +53,13 @@ else
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+# Install the plugins declared in vim/.vimrc's Plug block
+if command -v vim >/dev/null 2>&1; then
+    echo "Running :PlugInstall"
+    vim +PlugInstall +qall
+else
+    echo "vim not on PATH, skipping :PlugInstall -- run it yourself once vim is installed"
+fi
+
 echo
-echo "Done. lazy.nvim and conform.nvim bootstrap themselves on first nvim launch (see nvim/conform.lua)."
+echo "Done. lazy.nvim, conform.nvim, and nvim-lspconfig/mason bootstrap themselves on first nvim launch (see nvim/plugins.lua)."
