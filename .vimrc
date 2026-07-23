@@ -40,6 +40,8 @@ nnoremap <leader>P "*P
 nnoremap <leader>y "*y 
 nnoremap <leader>h :nohl<cr>
 """ "cease highlighting
+vnoremap <leader>i[ di[]<Esc>P
+" surround visual mode selection in square brackets
 
 " remap arrow keys to no-op to force me to learn hjkl
 inoremap <Up>    <nop>
