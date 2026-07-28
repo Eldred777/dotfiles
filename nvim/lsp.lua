@@ -21,18 +21,16 @@ return {
             capabilities = require("blink.cmp").get_lsp_capabilities(),
         })
 
-        -- nvim-lspconfig registers default configs for vim.lsp.config();
-        -- vim.lsp.enable() is the current (0.11+) way to turn them on.
         vim.lsp.enable({ "rust_analyzer", "pyright" })
 
-        -- gd/gD/K aren't bound by Neovim's built-in LSP defaults, so map
-        -- them here; buffer-local and re-applied on every client attach.
+        -- Bind LSP-related keybinds here
         vim.api.nvim_create_autocmd("LspAttach", {
             callback = function(args)
                 local opts = { buffer = args.buf }
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
                 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+                vim.keymap.set("n", "<C-k>", vim.diagnostic.open_float, opts)
             end,
         })
     end,
