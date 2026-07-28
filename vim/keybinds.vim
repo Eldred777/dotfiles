@@ -6,6 +6,8 @@ inoremap jk <Esc>                        " hit jk in insert mode to esc
 
 " Edit the real config entry point in the repo, not $MYVIMRC -- that only
 " resolves to the thin loader stub each editor sources at startup.
+" This guard picks which target the SHARED <leader>ev binding edits --
+" it's not a place for neovim-only keybinds (those belong in nvim/keybinds.lua).
 if has('nvim')
     nnoremap <leader>ev :edit ~/dotfiles/nvim/init.lua<cr>
 else
