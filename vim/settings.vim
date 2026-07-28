@@ -5,6 +5,7 @@ syntax enable " enable syntax highlighting
 set tabstop=4     " visual spaces per <TAB>
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab     " tabs are spaces
+set shiftwidth=4  " visual spaces for <TAB> - used in nvim LSP format requests
 
 " ui config
 set number         " show line numbers
