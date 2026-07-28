@@ -7,11 +7,18 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+        "saghen/blink.cmp",
     },
     config = function()
         require("mason").setup()
         require("mason-lspconfig").setup({
             automatic_installation = false,
+        })
+
+        -- Advertise blink.cmp's extra completion capabilities to every
+        -- server via vim.lsp.config's default "*" entry, before enabling.
+        vim.lsp.config("*", {
+            capabilities = require("blink.cmp").get_lsp_capabilities(),
         })
 
         -- nvim-lspconfig registers default configs for vim.lsp.config();
