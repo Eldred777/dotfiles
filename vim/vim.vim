@@ -21,5 +21,6 @@ source ~/dotfiles/vim/plugins.vim
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()

@@ -21,4 +21,5 @@ require("lazy").setup({
     dofile(vim.fn.expand("~/dotfiles/nvim/conform.lua")),
     dofile(vim.fn.expand("~/dotfiles/nvim/completion.lua")),
     dofile(vim.fn.expand("~/dotfiles/nvim/lsp.lua")),
+    dofile(vim.fn.expand("~/dotfiles/nvim/autopairs.lua")),
 })

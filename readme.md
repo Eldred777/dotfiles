@@ -22,6 +22,7 @@ nvim/plugins.lua          bootstraps lazy.nvim, skipped under vscode-neovim
 nvim/completion.lua       lazy.nvim spec: blink.cmp (autocomplete)
 nvim/conform.lua          lazy.nvim spec: conform.nvim (formatting)
 nvim/lsp.lua              lazy.nvim spec: nvim-lspconfig + mason
+nvim/autopairs.lua        lazy.nvim spec: nvim-autopairs
 
 .ideavimrc                entry point for IdeaVim (JetBrains IDEs)
 vim/intellij.vim          IdeaVim-only settings/plugins (e.g. NERDTree)
