@@ -1,2 +1,2 @@
 " Kept here for compatibility
-source ~/dotfiles/vim/.vimrc
+source ~/dotfiles/vim/vim.vim

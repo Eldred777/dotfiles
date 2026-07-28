@@ -16,9 +16,10 @@ source ~/dotfiles/vim/formatters.vim
 " -------------------------------------
 call plug#begin()
 
+source ~/dotfiles/vim/plugins.vim
+
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-" Plug 'machakann/vim-highlightedyank'
 
 call plug#end()

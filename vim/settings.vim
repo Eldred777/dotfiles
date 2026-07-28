@@ -1,4 +1,4 @@
-" General settings shared between vim (vim/.vimrc) and neovim (vim/shared.vim).
+" General settings shared between vim (vim/vim.vim) and neovim (vim/neovim.vim).
 syntax enable " enable syntax highlighting
 
 " Spaces and tabs
@@ -24,6 +24,8 @@ set foldnestmax=10
 set foldmethod=syntax
 set foldcolumn=2
 " Other acceptable values are marker, manual, expr, syntax, diff
+
+set shell=bash     " Open bash with :terminal
 
 augroup filetype_vim
     autocmd!

@@ -1,4 +1,4 @@
-" Key rebinds shared between vim (vim/.vimrc) and neovim (vim/shared.vim).
+" Key rebinds shared between vim (vim/vim.vim) and neovim (vim/neovim.vim).
 let mapleader = ","
 set timeoutlen=500 " set leader timeout to 500 ms
 
@@ -11,7 +11,7 @@ inoremap jk <Esc>                        " hit jk in insert mode to esc
 if has('nvim')
     nnoremap <leader>ev :edit ~/dotfiles/nvim/init.lua<cr>
 else
-    nnoremap <leader>ev :edit ~/dotfiles/vim/.vimrc<cr>
+    nnoremap <leader>ev :edit ~/dotfiles/vim/vim.vim<cr>
 endif
 
 nnoremap <leader>p "*p

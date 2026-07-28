@@ -1,6 +1,6 @@
 " Entry point for IdeaVim (see ~/.ideavimrc, the thin loader that sources
 " this file).
-source ~/dotfiles/vim/.vimrc
+source ~/dotfiles/vim/vim.vim
 
 " -------------------------------------
 " IdeaVim-only (NERDTree, etc.)
