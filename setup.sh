@@ -63,3 +63,7 @@ fi
 
 echo
 echo "Done. lazy.nvim, conform.nvim, and nvim-lspconfig/mason bootstrap themselves on first nvim launch (see nvim/plugins.lua)."
+
+echo "Setting up .bashrc"
+echo "source $DOTFILES_DIR/.bashrc" > ~/.bashrc
+
