@@ -33,6 +33,9 @@ write_loader() {
 # Plain vim
 write_loader "$HOME/.vimrc" "source ~/dotfiles/.vimrc"
 
+# IdeaVim (JetBrains IDEs)
+write_loader "$HOME/.ideavimrc" "source ~/dotfiles/.ideavimrc"
+
 # Neovim: resolve the platform's default config dir
 if [ -n "${XDG_CONFIG_HOME:-}" ]; then
     NVIM_CONFIG_DIR="$XDG_CONFIG_HOME/nvim"

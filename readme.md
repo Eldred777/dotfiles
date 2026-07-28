@@ -19,7 +19,10 @@ nvim/plugins.lua          bootstraps lazy.nvim, skipped under vscode-neovim
 nvim/conform.lua          lazy.nvim spec: conform.nvim (formatting)
 nvim/lsp.lua              lazy.nvim spec: nvim-lspconfig + mason
 
-setup_vim.sh              reproduces the machine setup (see below)
+.ideavimrc                entry point for IdeaVim (JetBrains IDEs)
+vim/intellij.vim          IdeaVim-only settings/plugins (e.g. NERDTree)
+
+setup.sh                  reproduces the machine setup (see below)
 ```
 
 Plain vim uses [vim-plug](https://github.com/junegunn/vim-plug) (plugins
@@ -30,13 +33,13 @@ declared in `vim/.vimrc`); neovim uses
 ## Setup
 
 ```sh
-./setup_vim.sh
+./setup.sh
 ```
 
-Writes the thin loader files (`~/.vimrc`, and the platform's neovim
-`init.lua`) that point back into this repo, and installs vim-plug plus the
-plugins it declares. Safe to re-run -- it backs up anything it would
-overwrite rather than clobbering it silently.
+Writes the thin loader files (`~/.vimrc`, `~/.ideavimrc`, and the
+platform's neovim `init.lua`) that point back into this repo, and installs
+vim-plug plus the plugins it declares. Safe to re-run -- it backs up
+anything it would overwrite rather than clobbering it silently.
 
 Neovim plugins (lazy.nvim, conform.nvim, nvim-lspconfig, mason.nvim)
 install themselves the first time neovim starts. LSP servers are not
