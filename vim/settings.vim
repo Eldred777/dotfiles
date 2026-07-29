@@ -17,18 +17,8 @@ filetype indent on " load filetype-specific indent files
 set incsearch      " search as characters typed
 set hlsearch       " highlight matches
 
-"folding
-set foldenable
-set foldlevelstart=10
-set foldnestmax=10
-set foldmethod=syntax
-set foldcolumn=2
-" Other acceptable values are marker, manual, expr, syntax, diff
+" folding
+source ~/dotfiles/vim/folding.vim
 
 set shell=bash        " Open bash with :terminal
 set shellcmdflag=-c   " Run shell commands (e.g. :!, filter) via bash -c
-
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
