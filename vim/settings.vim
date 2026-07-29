@@ -25,7 +25,8 @@ set foldmethod=syntax
 set foldcolumn=2
 " Other acceptable values are marker, manual, expr, syntax, diff
 
-set shell=bash     " Open bash with :terminal
+set shell=bash        " Open bash with :terminal
+set shellcmdflag=-c   " Run shell commands (e.g. :!, filter) via bash -c
 
 augroup filetype_vim
     autocmd!
