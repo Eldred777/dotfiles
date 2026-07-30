@@ -1,5 +1,4 @@
 vim.cmd("source ~/dotfiles/vim/neovim.vim")
-dofile(vim.fn.expand("~/dotfiles/nvim/keybinds.lua"))
 dofile(vim.fn.expand("~/dotfiles/nvim/vscode.lua"))
 dofile(vim.fn.expand("~/dotfiles/nvim/plugins.lua"))
 
@@ -15,4 +14,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
+vim.keymap.set("n", "<leader>:w", ":noa w<cr>")
 vim.opt.scrolloff = 10
