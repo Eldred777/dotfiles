@@ -2,7 +2,16 @@
 " this file).
 source ~/dotfiles/vim/vim.vim
 
-" -------------------------------------
-" IdeaVim-only (NERDTree, etc.)
-" -------------------------------------
-source ~/dotfiles/vim/intellij.vim
+" Show a few lines of context around the cursor.
+set scrolloff=10
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" -- IdeaVim plugins -- https://jb.gg/ideavim-plugins
+source ~/dotfiles/vim/plugins.vim
+Plug 'preservim/nerdtree' " file tree
+
+" Toggle NERDTree
+nnoremap <leader>n :NERDTreeToggle<cr>
+
