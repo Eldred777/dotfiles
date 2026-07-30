@@ -11,7 +11,9 @@ map Q gq
 " -- IdeaVim plugins -- https://jb.gg/ideavim-plugins
 source ~/dotfiles/vim/plugins.vim
 Plug 'preservim/nerdtree' " file tree
-
-" Toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<cr>
 
+" -- KEYMAPS
+nnoremap <leader>ev :e ~/dotfiles/.ideavimrc<CR>
+
+nnoremap <C-k> :action ShowErrorDescription<cr>
