@@ -6,9 +6,18 @@ return {
     "saghen/blink.cmp",
     version = "*",
     opts = {
-        keymap = { preset = "super-tab" },
+        keymap = {
+            preset = "super-tab",
+        },
         sources = {
             default = { "lsp", "path", "buffer" },
         },
-    },
+        completion = {
+            list = {
+                selection = {
+                    preselect = false
+                }
+            }
+        }
+    }
 }
