@@ -18,6 +18,13 @@ return {
                     preselect = false
                 }
             }
+        },
+        cmdline = {
+            keymap = {
+                preset = 'cmdline',
+
+                ['<CR>'] = { 'accept', 'fallback' },
+            }
         }
     }
 }
