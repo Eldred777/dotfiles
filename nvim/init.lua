@@ -15,4 +15,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.keymap.set("n", "<leader>:w", ":noa w<cr>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.opt.scrolloff = 10
