@@ -19,4 +19,4 @@ vim.keymap.set("n", "<leader>q", ":q<cr>")
 vim.keymap.set("n", "<leader>z", "za<cr>") -- toggle fold
 
 -- set for other extensions to use
-vim.g.mapleader = "<Space>"
+vim.g.mapleader = " "
