@@ -1,19 +1,35 @@
 " Entry point for IdeaVim (see ~/.ideavimrc, the thin loader that sources
 " this file).
-source ~/dotfiles/vim/vim.vim
 
-" Show a few lines of context around the cursor.
+" -- Global options
 set scrolloff=10
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
+" -- KEYMAPS
+nnoremap Q gq
+inoremap jk <Esc>                        " hit jk in insert mode to esc
+nnoremap <leader>h :nohl<cr>
+
+" -- LEADER Keybinds
+let mapleader = ","
+set timeoutlen=500 " set leader timeout to 500 ms
+nnoremap <leader>ev :e ~/dotfiles/.ideavimrc<CR>
+
+" LSP Keymaps
+nnoremap <C-k> :action ShowErrorDescription<cr>
 
 " -- IdeaVim plugins -- https://jb.gg/ideavim-plugins
-source ~/dotfiles/vim/plugins.vim
+call plug#begin()
+
 Plug 'preservim/nerdtree' " file tree
 nnoremap <leader>n :NERDTreeToggle<cr>
 
-" -- KEYMAPS
-nnoremap <leader>ev :e ~/dotfiles/.ideavimrc<CR>
+Plug 'machakann/vim-highlightedyank' " highlight copied text
+Plug 'tpope/vim-commentary'          " gcc/gc commenting motions
+Plug 'machakann/vim-highlightedyank' " highlight copied text
+Plug 'tpope/vim-commentary'          " gcc/gc commenting motions
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'jiangmiao/auto-pairs'
 
-nnoremap <C-k> :action ShowErrorDescription<cr>
+call plug#end()
