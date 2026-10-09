@@ -4,16 +4,19 @@ source ~/dotfiles/vim/settings.vim
 " -------------------------------------
 " Key rebinds
 " -------------------------------------
-inoremap jk <Esc>                        " hit jk in insert mode to esc
-nnoremap <leader>ev :edit ~/dotfiles/vim/vim.vim<cr>
-
+" mapleader must be set before any <leader> mapping is defined.
 let mapleader = ","
 set timeoutlen=500 " set leader timeout to 500 ms
 
-nnoremap <leader>p \"*p
-nnoremap <leader>P \"*P
-nnoremap <leader>y \"*y
-nnoremap <leader>h :nohl<cr> " Stop highlighting from search / ?
+" hit jk in insert mode to esc
+inoremap jk <Esc>
+nnoremap <leader>ev :edit ~/dotfiles/vim/vim.vim<cr>
+
+nnoremap <leader>p "*p
+nnoremap <leader>P "*P
+nnoremap <leader>y "*y
+" Stop highlighting from search / ?
+nnoremap <leader>h :nohl<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>z za<cr>
 
