@@ -6,7 +6,8 @@ set scrolloff=10
 
 " -- KEYMAPS
 nnoremap Q gq
-inoremap jk <Esc>                        " hit jk in insert mode to esc
+" hit jk in insert mode to esc
+inoremap jk <Esc>
 nnoremap <leader>h :nohl<cr>
 
 " -- LEADER Keybinds
