@@ -8,11 +8,12 @@ set scrolloff=10
 nnoremap Q gq
 " hit jk in insert mode to esc
 inoremap jk <Esc>
-nnoremap <leader>h :nohl<cr>
 
 " -- LEADER Keybinds
+" mapleader must be set before any <leader> mapping is defined.
 let mapleader = ","
 set timeoutlen=500 " set leader timeout to 500 ms
+nnoremap <leader>h :nohl<cr>
 nnoremap <leader>ev :e ~/dotfiles/.ideavimrc<CR>
 
 " LSP Keymaps
@@ -24,8 +25,6 @@ call plug#begin()
 Plug 'preservim/nerdtree' " file tree
 nnoremap <leader>n :NERDTreeToggle<cr>
 
-Plug 'machakann/vim-highlightedyank' " highlight copied text
-Plug 'tpope/vim-commentary'          " gcc/gc commenting motions
 Plug 'machakann/vim-highlightedyank' " highlight copied text
 Plug 'tpope/vim-commentary'          " gcc/gc commenting motions
 Plug 'prabirshrestha/asyncomplete.vim'
