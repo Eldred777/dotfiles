@@ -18,7 +18,7 @@ nnoremap <leader>y "*y
 " Stop highlighting from search / ?
 nnoremap <leader>h :nohl<cr>
 nnoremap <leader>q :q<cr>
-nnoremap <leader>z za<cr>
+nnoremap <leader>z za
 
 vnoremap <leader>i[ di[]<Esc>P
 " surround visual mode selection in square brackets

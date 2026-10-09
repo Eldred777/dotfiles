@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>y", '"*y')
 
 vim.keymap.set("n", "<leader>h", ":nohl<cr>") -- stop highlighting from search / ?
 vim.keymap.set("n", "<leader>q", ":q<cr>")
-vim.keymap.set("n", "<leader>z", "za<cr>")
+vim.keymap.set("n", "<leader>z", "za")
 
 -- Surround visual mode selection in square brackets
 vim.keymap.set("v", "<leader>i[", "di[]<Esc>P")
